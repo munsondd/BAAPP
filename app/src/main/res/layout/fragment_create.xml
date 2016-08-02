@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.munson.david.baapp.CreateFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Create an Event"
+        android:id="@+id/textView"
+        android:layout_gravity="left|top"
+        android:padding="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventTitleId"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="Enter event title"
+        android:padding="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/descriptionId"
+        android:layout_below="@+id/eventTitleId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Enter description"
+        android:padding="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Time:"
+        android:id="@+id/timeText"
+        android:layout_below="@+id/descriptionId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="to"
+        android:id="@+id/textTo"
+        android:padding="20dp"
+        android:layout_alignTop="@+id/startTime"
+        android:layout_toRightOf="@+id/startTime"
+        android:layout_toEndOf="@+id/startTime" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/startTime"
+        android:layout_alignBottom="@+id/timeText"
+        android:layout_toRightOf="@+id/timeText"
+        android:text="0:00"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:padding="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/endTime"
+        android:text="0:00"
+        android:padding="20dp"
+        android:layout_alignBottom="@+id/startTime"
+        android:layout_toRightOf="@+id/textTo"
+        android:layout_toEndOf="@+id/textTo" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/eventDate"
+        android:padding="20dp"
+        android:text="MM/dd/yyyy"
+        android:layout_below="@+id/endTime"
+        android:layout_alignRight="@+id/endTime"
+        android:layout_alignEnd="@+id/endTime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:imeOptions="flagNoFullscreen"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="private event"
+        android:id="@+id/privateEventChecker"
+        android:padding="20dp"
+        android:checked="false"
+        android:layout_below="@+id/locationId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:text="Tags"
+        android:padding="20dp"
+        android:layout_below="@+id/privateEventChecker"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/createNewEvent"
+        android:layout_toStartOf="@+id/createNewEvent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:id="@+id/createNewEvent"
+        android:layout_alignBottom="@+id/editText4"
+        android:layout_alignRight="@+id/endTime"
+        android:layout_alignEnd="@+id/endTime" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationId"
+        android:layout_below="@+id/eventDate"
+        android:layout_alignRight="@+id/endTime"
+        android:layout_alignEnd="@+id/endTime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="20dp"
+        android:text="location" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invite Friends"
+        android:id="@+id/inviteFriendsButton"
+        android:padding="20dp"
+        android:layout_alignTop="@+id/privateEventChecker"
+        android:layout_toRightOf="@+id/privateEventChecker"
+        android:layout_toEndOf="@+id/privateEventChecker" />
+
+</RelativeLayout>

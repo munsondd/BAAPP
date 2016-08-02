@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:touchscreenBlocksFocus="false">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/planner_button"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="plan"
+             />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_button"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:text="Search"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/social_button"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:text="Social"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_button"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:text="Create"
+            android:clickable="true"
+            />
+    </GridLayout>
+</RelativeLayout>
