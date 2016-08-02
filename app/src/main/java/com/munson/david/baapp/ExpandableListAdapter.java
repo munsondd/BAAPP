@@ -12,6 +12,7 @@ package com.munson.david.baapp;
     import android.view.View;
     import android.view.ViewGroup;
     import android.widget.BaseExpandableListAdapter;
+    import android.widget.Button;
     import android.widget.TextView;
 
     public class ExpandableListAdapter extends BaseExpandableListAdapter {
@@ -73,6 +74,16 @@ package com.munson.david.baapp;
                     .findViewById(R.id.listEventDescription);
 
             childDescriptionTxt.setText(childDescription);
+
+            final Button removeButton = (Button) convertView.findViewById(R.id.removeButton);
+            removeButton.setOnClickListener(
+                    new View.OnClickListener(){
+                        public void onClick(View v){
+                            MainActivity activity = (MainActivity) v.getContext();
+                            activity.onClickRemove(child);
+
+                        }
+                    });
 
             return convertView;
         }
