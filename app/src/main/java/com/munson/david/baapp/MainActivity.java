@@ -96,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
         SocialFragment newFragment = new SocialFragment();
         changePrimaryFragment(newFragment);
     }
+
+    public void onClickRemoveEvent(int eventId){
+
+    }
     public ArrayList<SocialPost> getFeedList() {
         return feedList;
     }

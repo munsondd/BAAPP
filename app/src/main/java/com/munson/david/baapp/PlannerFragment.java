@@ -7,6 +7,7 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -26,6 +27,8 @@ public class PlannerFragment extends Fragment {
         activity = (MainActivity) getActivity();
         view = inflater.inflate(R.layout.fragment_planner, container, false);
 
+
+
         return view;
     }
     @Override
@@ -37,6 +40,16 @@ public class PlannerFragment extends Fragment {
         prepareListData();
         listAdapter = new ExpandableListAdapter(activity, listDataHeader, listDataChild);
         expandableListView.setAdapter(listAdapter);
+
+       /*final Button removeButton = (Button) view.findViewById(R.id.removeButton);
+        removeButton.setOnClickListener(
+                new View.OnClickListener(){
+                    public void onClick(View v){
+
+                        //activity.onClickRemoveEvent(listAdapter.getChild());
+
+                    }
+                });*/
 
     }
 
