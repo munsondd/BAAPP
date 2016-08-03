@@ -79,8 +79,8 @@ package com.munson.david.baapp;
             removeButton.setOnClickListener(
                     new View.OnClickListener(){
                         public void onClick(View v){
-                            MainActivity activity = (MainActivity) v.getContext();
-                            activity.onClickRemove(child);
+                            //MainActivity activity = (MainActivity) v.getContext();
+                            //activity.onClickRemove(child);
 
                         }
                     });
