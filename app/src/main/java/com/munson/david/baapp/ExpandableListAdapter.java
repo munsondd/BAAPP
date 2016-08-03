@@ -18,6 +18,11 @@ package com.munson.david.baapp;
     public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");
+
+        public Context get_context() {
+            return _context;
+        }
+
         private Context _context;
         private ArrayList<String> _listDataHeader; // header titles
         // child data in format of header title, child title
@@ -77,9 +82,10 @@ package com.munson.david.baapp;
 
             final Button removeButton = (Button) convertView.findViewById(R.id.removeButton);
             removeButton.setOnClickListener(
+
                     new View.OnClickListener(){
                         public void onClick(View v){
-                            MainActivity activity = (MainActivity) v.getContext();
+                            MainActivity activity = (MainActivity) _context;
                             activity.onClickRemove(child);
 
                         }

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Event sampleEvent = new Event();
         sampleEvent.setTitle("Sample Event");
         sampleEvent.setLocation("Death Star");
-        sampleEvent.setDescription("a sample event for layour configuration");
+        sampleEvent.setDescription("a sample event");
         sampleEvent.setStartTime(new Date());
         sampleEvent.setEndTime(new Date());
         addEvent(sampleEvent);
@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+        onClickPlanner();
     }
 
     public void onClickRemoveEvent(int eventId){

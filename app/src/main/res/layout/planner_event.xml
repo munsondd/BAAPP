@@ -57,16 +57,19 @@
             android:layout_column="4"
             android:paddingLeft="20dp"
             android:paddingRight="40dp"
-            android:layout_columnSpan="2" />
+            android:layout_columnSpan="2"
+            android:textSize="12dp" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remove"
+            android:text="@string/remove_button"
             android:id="@+id/removeButton"
             android:layout_column="5"
             android:layout_row="0"
-           />
+            android:width="20dp"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1" />
 
     </GridLayout>
 
