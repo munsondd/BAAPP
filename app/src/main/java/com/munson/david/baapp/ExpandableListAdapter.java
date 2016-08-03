@@ -75,7 +75,6 @@ package com.munson.david.baapp;
 
             childDescriptionTxt.setText(childDescription);
 
-            //insert listener for remove that takes parameter (child)
             final Button removeButton = (Button) convertView.findViewById(R.id.removeButton);
             removeButton.setOnClickListener(
                     new View.OnClickListener(){

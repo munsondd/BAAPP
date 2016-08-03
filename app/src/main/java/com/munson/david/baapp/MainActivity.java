@@ -106,6 +106,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void onClickRemove(Event e){
+        for(int i = 0; i<eventContainerList.size(); i++){
+            for (int j = 0;j<eventContainerList.get(i).getEvents().size(); j++){
+                if (eventContainerList.get(i).getEvents().get(j).getId() == e.getId()) {
+                    eventContainerList.get(i).getEvents().remove(j);
+                }
+            }
+        }
+    }
+
     public void onClickRemoveEvent(int eventId){
 
     }
