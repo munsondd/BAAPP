@@ -96,15 +96,7 @@ public class MainActivity extends AppCompatActivity {
         SocialFragment newFragment = new SocialFragment();
         changePrimaryFragment(newFragment);
     }
-    public void onClickRemove(Event e){
-        for(int i = 0; i<eventContainerList.size(); i++){
-            for (int j = 0;j<eventContainerList.get(i).getEvents().size(); j++){
-                if (eventContainerList.get(i).getEvents().get(j).getId() == e.getId()) {
-                    eventContainerList.get(i).getEvents().remove(j);
-                }
-            }
-        }
-    }
+
 
     public void onClickRemove(Event e){
         for(int i = 0; i<eventContainerList.size(); i++){
@@ -133,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
             Calendar cal = Calendar.getInstance();
             cal.setTime(e.getStartTime());
             EventContainer container = new EventContainer();
-
+            SimpleDateFormat dbFormat = new SimpleDateFormat("MMM dd yyyy HH:mm");
             SimpleDateFormat sdf = new SimpleDateFormat("MMM dd yyyy");
             SimpleDateFormat times = new SimpleDateFormat("HH:mm");
             String eventDate = sdf.format(cal.getTime());
@@ -160,6 +152,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    public void storeEvent(Event e){
+        SimpleDateFormat dbFormat = new SimpleDateFormat("MMM dd yyyy HH:mm");
+
+    }
+
     private void sortEventContainerList(ArrayList<EventContainer> e){
         for(int i = 0; i<e.size(); i++){
             int min = i;
